@@ -960,15 +960,15 @@ public abstract class DataStore
         }
 
         //if worldguard is installed, also prevent claims from overlapping any worldguard regions
-        if (GriefPrevention.instance.config_claims_respectWorldGuard && this.worldGuard != null && creatingPlayer != null)
-        {
-            if (!this.worldGuard.canBuild(newClaim.lesserBoundaryCorner, newClaim.greaterBoundaryCorner, creatingPlayer))
-            {
-                result.succeeded = false;
-                result.claim = null;
-                return result;
-            }
-        }
+        // if (GriefPrevention.instance.config_claims_respectWorldGuard && this.worldGuard != null && creatingPlayer != null)
+        // {
+        //     if (!this.worldGuard.canBuild(newClaim.lesserBoundaryCorner, newClaim.greaterBoundaryCorner, creatingPlayer))
+        //     {
+        //         result.succeeded = false;
+        //         result.claim = null;
+        //         return result;
+        //     }
+        // }
         if (dryRun)
         {
             // since this is a dry run, just return the unsaved claim as is.
