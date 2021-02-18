@@ -1790,11 +1790,11 @@ public abstract class DataStore
         try
         {
             config.options().header("Use a YAML editor like NotepadPlusPlus to edit this file.  \nAfter editing, back up your changes before reloading the server in case you made a syntax error.  \nUse dollar signs ($) for formatting codes, which are documented here: http://minecraft.gamepedia.com/Formatting_codes");
-            config.save(DataStore.messagesFilePath);
+            config.save(DataStore.messagesFilePath + ".template");
         }
         catch (IOException exception)
         {
-            GriefPrevention.AddLogEntry("Unable to write to the configuration file at \"" + DataStore.messagesFilePath + "\"");
+            GriefPrevention.AddLogEntry("Unable to write to the configuration file at \"" + DataStore.messagesFilePath + ".template\"");
         }
 
         defaults.clear();

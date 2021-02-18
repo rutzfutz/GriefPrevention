@@ -901,7 +901,7 @@ public class GriefPrevention extends JavaPlugin
         }
         catch (IOException exception)
         {
-            AddLogEntry("Unable to write to the configuration file at \"" + DataStore.configFilePath + "\"");
+            AddLogEntry("Unable to write to the configuration file at \"" + DataStore.configFilePath + ".template\"");
         }
 
         //try to parse the list of commands requiring access trust in land claims
@@ -2629,6 +2629,7 @@ public class GriefPrevention extends JavaPlugin
             if (player != null)
             {
                 GriefPrevention.sendMessage(player, TextMode.Success, "[Hippo] Configuration updated.  If you have updated your Grief Prevention JAR, you still need to /reload or reboot your server.");
+                GriefPrevention.sendMessage(player, TextMode.Success, "[Hippo] Example setting from config file: BanCommandPattern=" + this.config_ban_commandFormat);
             }
             else
             {
