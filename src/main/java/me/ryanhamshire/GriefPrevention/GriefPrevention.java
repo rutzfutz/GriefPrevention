@@ -897,7 +897,7 @@ public class GriefPrevention extends JavaPlugin
 
         try
         {
-            outConfig.save(DataStore.configFilePath);
+            outConfig.save(DataStore.configFilePath + ".template");
         }
         catch (IOException exception)
         {
